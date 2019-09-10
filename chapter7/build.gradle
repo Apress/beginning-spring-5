@@ -1,0 +1,17 @@
+plugins {
+    id 'org.springframework.boot' version "2.1.5.RELEASE"
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+dependencies {
+    compile 'com.h2database:h2:1.4.199'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-jdbc'
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+}
+
+bootJar {
+    archiveBaseName = 'bsg5-chapter7'
+    version = '1.0.0'
+}

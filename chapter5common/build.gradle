@@ -1,0 +1,9 @@
+dependencies {
+    compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
+
+    compile "org.springframework:spring-core:$springFrameworkVersion"
+    compile "org.springframework:spring-context:$springFrameworkVersion"
+    compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+
+    compile project(':chapter3')
+}

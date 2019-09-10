@@ -1,0 +1,27 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+ext {
+    springFrameworkVersion = "5.1.5.RELEASE"
+    jacksonVersion = "2.9.9"
+    testNgVersion = "6.14.3"
+}
+
+allprojects {
+    apply plugin: 'java'
+
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        testImplementation "org.testng:testng:$testNgVersion"
+    }
+
+    test {
+        useTestNG()
+    }
+}

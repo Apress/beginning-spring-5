@@ -1,0 +1,18 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.4.RELEASE' apply false
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+dependencyManagement {
+    imports {
+        mavenBom org.springframework.boot.gradle
+            .plugin.SpringBootPlugin.BOM_COORDINATES
+    }
+}
+
+dependencies {
+    compile "org.springframework.data:spring-data-commons"
+    compile "org.springframework:spring-tx"
+    compile "org.springframework:spring-beans"
+}

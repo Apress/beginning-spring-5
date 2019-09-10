@@ -1,0 +1,40 @@
+plugins {
+    id 'war'
+    id 'java'
+    id 'org.gretty' version '2.2.0'
+}
+
+dependencies {
+    compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
+
+    compile "org.springframework:spring-core:$springFrameworkVersion"
+    compile "org.springframework:spring-context:$springFrameworkVersion"
+    compile "org.springframework:spring-web:$springFrameworkVersion"
+    compile "org.springframework:spring-webmvc:$springFrameworkVersion"
+    compile group: "org.springframework.security",
+        name: "spring-security-core",
+        version: "$springFrameworkVersion"
+    compile group: "org.springframework.security",
+        name: "spring-security-config",
+        version: "$springFrameworkVersion"
+    compile group: "org.springframework.security",
+        name: "spring-security-web",
+        version: "$springFrameworkVersion"
+    
+    compile 'javax.annotation:jsr250-api:1.0'
+    
+    compile "org.jtwig:jtwig-web:5.87.0.RELEASE"
+    compile "org.jtwig:jtwig-spring:5.87.0.RELEASE"
+    compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+
+    testCompile "org.springframework:spring-test:$springFrameworkVersion"
+    testCompile "org.testng:testng:$testNgVersion"
+    testCompile 'org.hamcrest:hamcrest-all:1.3'
+    compile group: 'org.springframework.security.oauth',
+        name: 'spring-security-oauth2',
+        version: '2.3.6.RELEASE'
+    compile group: 'org.springframework.security',
+        name: 'spring-security-oauth2-client',
+        version: '5.1.5.RELEASE'
+    compile project(":chapter3")
+}

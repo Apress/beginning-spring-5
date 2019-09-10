@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- chapter4/src/test/resources/config-02.xml -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="foo" class="com.bsg5.chapter4.SecondObject">
+        <constructor-arg name="initialValue"
+                         value="Initial Value"/>
+    </bean>
+</beans>

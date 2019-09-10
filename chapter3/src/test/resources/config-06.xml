@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- chapter3/src/test/resources/config-06.xml -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="/normalizers-na.xml" />
+
+    <bean name="musicService" class="com.bsg5.chapter3.mem04.MusicService4">
+        <constructor-arg name="artistNormalizer" ref="foo" />
+        <constructor-arg name="songNormalizer" ref="bar" />
+    </bean>
+</beans>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+
+{% if (app.request.query.containsKey("error")) %}
+    <p style='color:red'>
+        Invalid username and password.
+    </p>
+{% endif %}
+
+<form action="login" method="POST">
+    <p>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" />
+    </p>
+    <p>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" />
+    </p>
+    <input type="hidden" name="{{_csrf.parameterName}}" value="{{_csrf.token}}"/>
+    <button type="submit">Login</button>
+</form>
+</body>
+</html>

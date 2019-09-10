@@ -1,0 +1,6 @@
+dependencies {
+    compile "org.springframework:spring-core:$springFrameworkVersion"
+    compile "org.springframework:spring-context:$springFrameworkVersion"
+    compile "org.springframework:spring-test:$springFrameworkVersion"
+    compile "javax.annotation:javax.annotation-api:1.3.2"
+}
