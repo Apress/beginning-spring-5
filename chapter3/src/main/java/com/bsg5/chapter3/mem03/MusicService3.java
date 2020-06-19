@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope()
 public class MusicService3 extends AbstractMusicService {
     @Autowired
     @Qualifier("bar")

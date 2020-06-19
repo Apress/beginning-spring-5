@@ -29,13 +29,10 @@ public class TestMusicService1 extends AbstractTestNGSpringContextTests {
                 Arrays.asList(context.getBeanDefinitionNames())
         );
 
-
-        /*
         // uncomment if you'd like to see the entire set of defined beans
         for (String d : definitions) {
             System.out.println(d);
         }
-        */
 
         assertTrue(definitions.contains("musicService1"));
     }
