@@ -26,9 +26,9 @@ public class GetSongsController {
     public ResponseEntity<Song> getSong(
             @PathVariable("artist") final String artist,
             @PathVariable("name") final String name
-    ) {
-        String artistDecoded = URLDecoder.decode(artist, StandardCharsets.UTF_8);
-        String nameDecoded = URLDecoder.decode(name, StandardCharsets.UTF_8);
+    ) throws UnsupportedEncodingException {
+        String artistDecoded = URLDecoder.decode(artist, "UTF-8");
+        String nameDecoded = URLDecoder.decode(name, "UTF-8");
         Song song = service.getSong(artistDecoded, nameDecoded);
 
         return new ResponseEntity<>(song, HttpStatus.OK);
